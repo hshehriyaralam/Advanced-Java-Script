@@ -145,7 +145,8 @@
 
 
 // fetch method  return promise 
-fetch("https://api.escuelajs.co/api/v1/products/")
+// fetch("https://api.escuelajs.co/api/v1/products/")
+fetch("https://fakestoreapi.com/products")
 .then((data) => data.json())
 .then(result => {
     // console.log("result",result);
@@ -162,7 +163,7 @@ const renderUI = (item) => {
         // console.log("products", product);
         parent.innerHTML += ` <div class="col-md-3"> 
            <div class="card" style="width: 100%">
-  <img src="${product.images} style="width: 100%; height: 300px; "class="card-img-top" alt="...">
+  <img src="${product.images}" style="width: 100%; height: 300px; "class="card-img-top" alt="...">
   <div class="card-body" >
     <h5 class="card-title">${product.title}</h5>
     <p class="card-text">${product.description.slice(0,100)}</p>
