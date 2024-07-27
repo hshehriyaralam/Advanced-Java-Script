@@ -45,7 +45,7 @@
 // same work as a Start WIth
 // But Read last Sequence
 // let str6 = "Shehriyar ALam";
-// // console.log(str6.endsWith("ma")); false read ENd sequence
+// // console.log(str6.endsWith("ma")); false read End sequence
 // console.log(str6.endsWith("lam"));
 
 

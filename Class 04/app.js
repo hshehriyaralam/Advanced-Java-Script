@@ -146,35 +146,93 @@
 
 // fetch method  return promise 
 // fetch("https://api.escuelajs.co/api/v1/products/")
-fetch("https://fakestoreapi.com/products")
-.then((data) => data.json())
-.then(result => {
-    // console.log("result",result);
-    renderUI(result)
-})
-.catch(error => {
-    console.log("error", error);
-})
+// fetch("https://fakestoreapi.com/products")
+// .then((data) => data.json())
+// .then(result => {
+//     // console.log("result",result);
+//     renderUI(result)
+// })
+// .catch(error => {
+//     console.log("error", error);
+// })
 
 
-const renderUI = (item) => {
-    const parent = document.getElementById("parent");
-    for (var product of item){
-        // console.log("products", product);
-        parent.innerHTML += ` <div class="col-md-3"> 
-           <div class="card" style="width: 100%">
-  <img src="${product.images}" style="width: 100%; height: 300px; "class="card-img-top" alt="...">
-  <div class="card-body" >
-    <h5 class="card-title">${product.title}</h5>
-    <p class="card-text">${product.description.slice(0,100)}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>`
+// const renderUI = (item) => {
+//     const parent = document.getElementById("parent");
+//     for (var product of item){
+//         // console.log("products", product);
+//         parent.innerHTML += ` <div class="col-md-3"> 
+//            <div class="card" style="width: 100%">
+//   <img src="${product.images}" style="width: 100%; height: 300px; "class="card-img-top" alt="...">
+//   <div class="card-body" >
+//     <h5 class="card-title">${product.title}</h5>
+//     <p class="card-text">${product.description.slice(0,100)}</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+// </div>`
      
-    }
+//     }
 
-}
+// }
+
+// Async Functions 
+// async function test(){
+//     return "Async Functions"
+// }
+
+// console.log(test());
+
+// Async Functions as a work Promise 
+
+
+// then and catch use 
+// let test2 = async() => "then method use "
+// test2().then((result)=> {
+//     console.log(result, "Successfully");
+// })
+// .catch ((error) => {
+// console.log("Try Again");
+// })
+// console.log(test2());
+
+// console.log(test2());
+
+// aync function as a work Primise function but Catch method isn't run
+
+// await method
+// await method syncronous ko asyncronous main convert karega 
+// await mehod ham async function main de sakte hain
+
+
+// let test3 = async() => {
+//     console.log("line 1");
+//     console.log("line 2");
+//   await console.log("line 3");
+//     console.log("line 4");
+// }
+// test3();
+// console.log("line 5");
+// console.log("line 6");
+// console.log("line 7");
+
+
+
+// await use without async function
+// let test4 = ()=> {
+//     console.log("Message 2");
+//     console.log("Message 3");
+//      await console.log("Message 4"); || Error
+//     console.log("Message 5");
+// }
+// test4();
+// console.log("Message 6");
+// console.log("Message 7");
+
+
+
+
+
 
 
 
