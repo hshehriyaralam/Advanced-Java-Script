@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+    console.log(localStorage.getItem("ToDo Collections"));
+    if (localStorage.getItem("ToDo Collections")) {
+      window.location.replace("../Pages/login.html");
+    }
+    
+  });
+
+
+
 import { collection,
      addDoc,
       db,

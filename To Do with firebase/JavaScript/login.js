@@ -1,3 +1,14 @@
+window.addEventListener("load", () => {
+    if (localStorage.getItem("ToDo Collections")) {
+      window.location.replace("../index.html");
+    }
+    // if (!localStorage.getItem("ToDo Collections")) {
+    //     window.location.replace("../pages/signUp.html");
+    //   }
+  });
+  
+
+
 import { auth, signInWithEmailAndPassword } from "../JavaScript/firebas.js";
 
  let loginHandler = async () => {
@@ -11,7 +22,7 @@ import { auth, signInWithEmailAndPassword } from "../JavaScript/firebas.js";
             email.value,
             password.value,
         )
-        window.location.replace("./index.html")
+        window.location.replace("../index.html")
         console.log("response",response);
     }catch(e){
         alert(e.message)

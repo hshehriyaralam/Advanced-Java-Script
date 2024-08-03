@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+    if (localStorage.getItem("ToDo Collections")) {
+      window.location.replace("../index.html");
+    }
+  });
+  
+
+
+
+
 import{
     auth,
     createUserWithEmailAndPassword,
@@ -31,13 +41,14 @@ const signUpHnadler = async () => {
         const uid = response.user.uid;
         const userResponse = await setDoc(doc(db,"ToDo Collections",uid),userObjcet)
         alert("user successfuly SignUp");
-        window.location.href = "../JavaScript/login.html";
+        window.location.href = "../Pages/login.html";
         console.log("userResponse", userResponse);
         console.log("response",response );
 
         console.log(uid, "UID");
     }catch(e){
-        alert(e.message)
+        console.log(e.message);
+        
     }
 }
 window.signUpHnadler = signUpHnadler

@@ -3,16 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login Page</title><!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- Custome CSS -->
+    <link rel="stylesheet" href="../Pages/login.css">
 </head>
 <body>
-    <h2>login Page</h2>
-    <div>
-        <input type="text" id="email" placeholder="Enter your Email">
-        <input type="password" id="password" placeholder="Enter your password">
-        <button onclick="loginHandler()">login</button>
-
+    <div class="main">
+        <div class="container border border-1 submain">
+    <h2 class="text-center text-white fs-1"> login Page</h2>
+    <div class="all-input ">
+        <!-- Email -->
+        <div class="card-body border border-2 rounded-pill d-flex" style="width: 70%; height: 10vh;">
+         <!-- Icon -->
+         <div class=" rounded-circle d-flex  font" style=" width: 60px; height: 60px;">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+          <!-- Icon End -->
+        <input type="text" id="email" placeholder="Enter your Email" class="m-2 my-3 ms-3  bg-transparent  " style="width: 70%; height: 5vh;">
     </div>
+        <br>
+        <!-- Password -->
+        <div class="card-body border border-2 rounded-pill d-flex" style="width: 70%; height: 10vh;">
+            <!-- Icon -->
+            <div class=" rounded-circle d-flex  font" style=" width: 60px; height: 60px;">
+               <!-- <i class="fa-regular fa-envelope"></i> -->
+               <i class="fa-regular fa-keyboard"></i>
+
+           </div>
+             <!-- Icon End -->
+             <input type="password" id="password" placeholder="Enter your password" class="m-2 my-3 ms-3  bg-transparent  " style="width: 70%; height: 5vh;">
+       </div>
+        <br>
+        <!-- Button -->
+        <div class="card-body border border-2 rounded-pill d-flex align-items-center justify-content-center bg-white  ms-5 " style="width: 50%; height: 8vh;">
+            <button onclick="loginHandler()">login</button>
+            </div>
+    </div>
+</div>
+</div>
 </body>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!-- Costume JS -->
 <script src="../JavaScript/login.js" type="module"></script>
 </html>
