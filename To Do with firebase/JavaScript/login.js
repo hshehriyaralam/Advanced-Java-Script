@@ -1,10 +1,9 @@
 window.addEventListener("load", () => {
-    if (localStorage.getItem("ToDo Collections")) {
+    if (localStorage.getItem("User")) {
       window.location.replace("../index.html");
     }
-    // if (!localStorage.getItem("ToDo Collections")) {
-    //     window.location.replace("../pages/signUp.html");
-    //   }
+
+
   });
   
 
@@ -21,11 +20,14 @@ import { auth, signInWithEmailAndPassword } from "../JavaScript/firebas.js";
             auth,
             email.value,
             password.value,
-        )
+        );
+        localStorage.setItem("User", response.user.uid);
         window.location.replace("../index.html")
         console.log("response",response);
     }catch(e){
-        alert(e.message)
+      alert(e.message)
+      // window.location.replace("../Pages/signUp.html")
+
     }
  }
  window.loginHandler = loginHandler

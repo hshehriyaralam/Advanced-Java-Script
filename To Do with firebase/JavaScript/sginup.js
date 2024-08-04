@@ -1,7 +1,8 @@
 window.addEventListener("load", () => {
-    if (localStorage.getItem("ToDo Collections")) {
-      window.location.replace("../index.html");
+    if (localStorage.getItem("User")) {
+      window.location.replace("../Page/login.html");
     }
+    
   });
   
 

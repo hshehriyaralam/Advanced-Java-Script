@@ -1,9 +1,8 @@
 window.addEventListener("load", () => {
-    console.log(localStorage.getItem("ToDo Collections"));
-    if (localStorage.getItem("ToDo Collections")) {
+    console.log(localStorage.getItem("User"));
+    if (!localStorage.getItem("User")) {
       window.location.replace("../Pages/login.html");
     }
-    
   });
 
 
@@ -124,7 +123,15 @@ let editTodo = async (ele) => {
         console.log("error", erro.message);
     }
 }
+
+
+const logOut = () => {
+    localStorage.removeItem("User");
+    localStorage.clear();
+    window.location.replace("../Pages/login.html");
+  };
 window.addEventListener("load", getToDo)
 window.addTodo = addTodo
 window.deleteTodo = deleteTodo
 window.editTodo = editTodo
+window.logOut = logOut
